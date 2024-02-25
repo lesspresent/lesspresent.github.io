@@ -8,20 +8,21 @@ title: Index
 
 {% block content %}
   <article class="prose prose-slate prose-headings:font-thin prose-li:font-light col-span-3 max-w-none p-8">
-      <div>
-        <h1>Less Present</h1>
-        <p>Hi. I'm Jonathon, a developer who likes to read, write about programming languages, and tinker.</p>
-        <p>
-          This site is split into three sections: Journal Entries, Projects, and Notes.
-          Journal entries are day-to-day thoughts, which are typically published once.
-          Projects are longer-term endeavors, which may be updated over time.
-          Notes are my personal notes on topics, in various states of readability.
-        </p>
-        <p>
-          This site is called "Less Present" because it's a mental, abstract space.
-          It stands in contrast to being "present" in the physical, real world.
-        </p>
-      </div>
+    <div>
+      <h1>Less Present</h1>
+      <p>Hi. I'm Jonathon, a developer who likes to read, write about programming languages, and tinker.</p>
+      <p>
+        This site is split into three sections: Journal Entries, Projects, and Notes.
+        Journal entries are day-to-day thoughts, which are typically published once.
+        Projects are longer-term endeavors, which may be updated over time.
+        Notes are my personal notes on topics, in various states of readability.
+      </p>
+      <p>
+        This site is called "Less Present" because it's a mental, abstract space.
+        It stands in contrast to being "present" in the physical, real world.
+      </p>
+    </div>
+
     <div class="grid grid-cols-3">
       <div>
         <h2>Recent Journal Entries</h2>
@@ -30,49 +31,44 @@ title: Index
           {% for post in taglist | reverse %}
           <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
             <p>Created: {{ post.data.created | postDate }}</p>
-            <p>
-              {% if post.data.created.toString() != post.page.date.toString() %}
-              Updated: {{ post.page.date | postDate }}
-              {% endif %}
-            </p>
+            {% if post.data.created.toString() != post.page.date.toString() %}
+              <p>Updated: {{ post.page.date | postDate }}</p>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
         <a href="/tags/journal/">All Journal entries</a>
-    </div>
-    <div>
+      </div>
+      <div>
         <h2>Recent Project Updates</h2>
         <ul>
           {% set taglist = collections.projects.slice(-5) %}
           {% for post in taglist | reverse %}
           <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
             <p>Created: {{ post.data.created | postDate }}</p>
-            <p>
-              {% if post.data.created.toString() != post.page.date.toString() %}
-              Updated: {{ post.page.date | postDate }}
-              {% endif %}
-            </p>
+            {% if post.data.created.toString() != post.page.date.toString() %}
+              <p>Updated: {{ post.page.date | postDate }}</p>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
-        <a href="/tags/pages/">All pages</a>
-  </div><div>
+        <a href="/tags/projects/">All projects</a>
+      </div>
+      <div>
         <h2>Recent Notes</h2>
         <ul>
           {% set taglist = collections.notes.slice(-5) %}
           {% for post in taglist | reverse %}
           <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
             <p>Created: {{ post.data.created | postDate }}</p>
-            <p>
-              {% if post.data.created.toString() != post.page.date.toString() %}
-              Updated: {{ post.page.date | postDate }}
-              {% endif %}
-            </p>
+            {% if post.data.created.toString() != post.page.date.toString() %}
+              <p>Updated: {{ post.page.date | postDate }}</p>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
         <a href="/tags/notes/">All Notes</a>
-</div>
-</div>
+      </div>
+    </div>
   </article>
   {% endblock %}

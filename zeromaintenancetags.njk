@@ -18,9 +18,11 @@ permalink: /tags/{{ tag }}/
     {% set taglist = collections[ tag ] %}
     {% for post in taglist | reverse %}
       <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
-        <p>Created: {{ post.data.created | postDate }}</p><p>
-        Updated: {{ post.page.date | postDate }}
-        </p></li>
+        <p>Created: {{ post.data.created | postDate }}</p>
+        {% if post.data.created and post.data.created.toString() != post.page.date.toString() %}
+          <p>Updated: {{ post.page.date | postDate }}</p>
+        {% endif %}
+      </li>
     {% endfor %}
     </ul>
   </article>

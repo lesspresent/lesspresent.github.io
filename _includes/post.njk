@@ -8,9 +8,9 @@
             <span></span>
             <h1>{{ title }}</h1>
             <p class="font-thin text-sm">by {{ author }}</p>
-            <p class="font-thin text-sm">authored {{ page.date | postDate }}</p>
-            {% if updated %}
-                <p class="font-thin text-sm">updated {{ updated | postDate }}</p>
+            <p class="font-thin text-sm">authored {{ created | postDate }}</p>
+            {% if created.toString() != page.date.toString() %}
+                <p class="font-thin text-sm">updated {{ page.date | postDate }}</p>
             {% endif %}
         </div>
         {{ content | safe }}
