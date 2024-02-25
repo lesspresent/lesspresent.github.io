@@ -9,17 +9,17 @@
       <p>Hi. I'm a developer who likes to read, write about programming languages, and tinker.</p>
     </section>
     <section>
-      <h2>Recent Journal Entries</h1>
+      <h2>Recent Journal Entries</h2>
       <ul>
         {% set taglist = collections.journal %}
         {% for post in taglist | reverse %}
         <li><a href="{{ post.url }}">{{ post.data.title }}</a> ({{ post.page.date | postDate }})</li>
         {% endfor %}
       </ul>
-      <a href="/tags/journal/">All Journal entries.</a>
+      <a href="/tags/journal/">All Journal entries</a>
     </section>
     <section>
-      <h2>Recent Page Updates</h1>
+      <h2>Recent Page Updates</h2>
       <ul>
         {% set taglist = collections.pages %}
         {% for post in taglist | reverse %}
@@ -33,7 +33,7 @@
         </li>
         {% endfor %}
       </ul>
-      <a href="/tags/pages/">All pages.</a>
+      <a href="/tags/pages/">All pages</a>
     </section>
   </article>
 {% endblock %}
