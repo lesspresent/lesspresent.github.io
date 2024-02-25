@@ -1,0 +1,29 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+{% extends "_includes/default.njk" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="flex justify-center p-8 font-light">
+  <article class="prose prose-slate prose-headings:font-thin">
+    <h1>All {{ tag }} entries</h1>
+
+    <ol>
+    {% set taglist = collections[ tag ] %}
+    {% for post in taglist | reverse %}
+      <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}.</a>
+        <p>Created: {{ post.page.date | postDate }}</p><p>
+        {% if post.data.updated %}
+        Updated {{ post.data.updated | postDate }}
+        {% endif %}</p></li>
+    {% endfor %}
+    </ol>
+  </article>
+</div>
+{% endblock %}

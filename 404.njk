@@ -1,0 +1,17 @@
+---
+title: Oops! Not Found
+permalink: 404.html
+---
+
+{% extends "_includes/default.njk" %}
+
+{% block title %}404: Page not found{% endblock %}
+
+{% block content %}
+<div class="flex justify-center p-8 font-light">
+  <article class="prose prose-slate prose-md lg:prose-2xl">
+    <h1 class="not-prose font-thin text-5xl">404 Page Not Found</h1>
+    <p>Sorry, that page can't be found.</p>
+    <a href="/">Go home?</a>
+</div>
+{% endblock %}

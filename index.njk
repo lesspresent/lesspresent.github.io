@@ -1,0 +1,41 @@
+{% extends "_includes/default.njk" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <article class="col-span-2 prose prose-slate prose-headings:font-thin max-w-none min-w-full p-8">
+    <div class="grid grid-cols-2">
+      <div class="col-span-2">
+        <h1>Less Present</h1>
+        <p>Hi. I'm a developer who likes to read, write about programming languages, and tinker.</p>
+      </div>
+      <div>
+        <h1>Recent Journal Entries</h1>
+        <ul>
+          {% set taglist = collections.journal %}
+          {% for post in taglist | reverse %}
+          <li><a href="{{ post.url }}">{{ post.data.title }}</a> ({{ post.page.date | postDate }})</li>
+          {% endfor %}
+        </ul>
+        <a href="/tags/journal/">View all Journal entries.</a>
+      </div>
+      <div>
+        <h1>Recent Page Updates</h1>
+        <ul>
+          {% set taglist = collections.pages %}
+          {% for post in taglist | reverse %}
+          <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
+            <p>Created: {{ post.page.date | postDate }}</p>
+            <p>
+            {% if post.data.updated %}
+            Updated: {{ post.data.updated | postDate }}
+            {% endif %}
+          </p>
+        </li>
+          {% endfor %}
+        </ul>
+      <a href="/tags/pages/">View all pages.</a>
+      </div>
+    </div>
+  </article>
+{% endblock %}
