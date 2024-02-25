@@ -16,4 +16,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY);
   })
+
+  return {
+    dir: {
+      output: "docs"
+    }
+  }
 };
