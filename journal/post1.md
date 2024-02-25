@@ -1,5 +1,5 @@
 ---
-title: test post
+title: Test post
 author: Jonathon
 date: 2024-02-25T10:37:00
 ---
