@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-      LessPresent - {% block title %}{% endblock %}
-    </title>
-    <meta charset="UTF-8"/>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
-    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet">
-    {% block head %}{% endblock %}
-  </head>
-  <body class="bg-slate-400">
-    <nav class="prose max-w-none ring-1 shadow-md ring-slate-500 pt-1 pb-1 prose-a:font-thin hover:prose-a:font-light">
-      <a href="/" class="pl-4">Home</a><a href="/tags/journal" class="pl-4">Journal</a><a href="/tags/pages" class="pl-4">Pages</a>
-    </nav>
+
+<head>
+  <title>
+    LessPresent - {% block title %}{% endblock %}
+  </title>
+  <meta charset="UTF-8" />
+  {% if description %}
+  <meta name="description" content="{{description}}" />
+  {% endif %}
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+  <link rel="stylesheet" href="/style.css?v={% version %}" />
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet">
+  {% block head %}{% endblock %}
+</head>
+
+<body class="bg-slate-400">
+  <nav class="prose max-w-none ring-1 shadow-md ring-slate-500 pt-1 pb-1 prose-a:font-thin hover:prose-a:font-light">
+    <a href="/" class="pl-4">Home</a><a href="/tags/journal" class="pl-4">Journal</a><a href="/tags/pages"
+      class="pl-4">Pages</a>
+  </nav>
     {% block content %}
-      {{ content | safe }}
+    {{ content | safe }}
     {% endblock %}
-  </body>
+</body>
+
 </html>
