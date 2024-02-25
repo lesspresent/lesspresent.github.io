@@ -1,4 +1,5 @@
 ---
+title: Tag Generator
 pagination:
   data: collections
   size: 1
@@ -11,17 +12,16 @@ permalink: /tags/{{ tag }}/
 
 {% block content %}
   <article class="prose prose-slate prose-headings:font-thin prose-li:font-light">
-    <h1>All {{ tag }} entries</h1>
+    <h1>{{ tag }}</h1>
 
-    <ol>
+    <ul>
     {% set taglist = collections[ tag ] %}
     {% for post in taglist | reverse %}
       <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
-        <p>Created: {{ post.page.date | postDate }}</p><p>
-        {% if post.data.updated %}
-        Updated {{ post.data.updated | postDate }}
-        {% endif %}</p></li>
+        <p>Created: {{ post.data.created | postDate }}</p><p>
+        Updated: {{ post.page.date | postDate }}
+        </p></li>
     {% endfor %}
-    </ol>
+    </ul>
   </article>
 {% endblock %}

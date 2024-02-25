@@ -5,6 +5,7 @@ author: Jonathon
 pageNum: Start of Ch 8.4
 interest: Medium
 date: 2024-02-25T16:15:00
+created:  2024-02-25T16:15:00
 tags: inProgressProgrammingBook
 ---
 

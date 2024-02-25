@@ -17,9 +17,11 @@
 </head>
 
 <body class="bg-slate-400">
+<div class="sticky top-0 bg-slate-400/[.85]">
   <nav class="prose max-w-none ring-1 shadow-md ring-slate-500 pt-1 pb-1 prose-a:font-thin hover:prose-a:font-light">
-    <a href="/" class="pl-4">Home</a><a href="/tags/journal" class="pl-4">Journal</a><a href="/tags/pages" class="pl-4">Pages</a>
+    <a href="/" class="pl-4">Home</a><a href="/tags/journal" class="pl-4">Journal</a><a href="/tags/projects" class="pl-4">Projects</a><a href="/tags/notes" class="pl-4">Notes</a>
   </nav>
+  </div>
   <div class="flex justify-center p-8">
     {% block content %}
     {{ content | safe }}
