@@ -12,7 +12,7 @@ permalink: /tags/{{ tag }}/
 
 {% block content %}
   <article class="prose prose-slate prose-headings:font-thin prose-li:font-light">
-    <h1>{{ tag }}</h1>
+    <h1 class="capitalize">{{ tag }}</h1>
 
     <ul>
     {% set taglist = collections[ tag ] %}
