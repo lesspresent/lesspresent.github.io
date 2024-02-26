@@ -20,8 +20,10 @@ created: 2024-02-25T15:17:00
         <p class="font-thin text-sm">Author: {{ post.data.bookAuthor }}</p>
         <p class="font-thin text-sm">Page: {{ post.data.pageNum }}</p>
         <p class="font-thin text-sm">Interest Level: {{ post.data.interest }}</p>
+        <p class="font-thin text-sm">Last Update: {{ post.data.date | postDate }}</p>
+        {{ post.content | safe }}
     </div>
-    {{ post.content | safe }}
+    <p></p>
 {% endfor %}
 
 <h2>Programming Books</h2>
@@ -33,6 +35,8 @@ created: 2024-02-25T15:17:00
         <p class="font-thin text-sm">Author: {{ post.data.bookAuthor }}</p>
         <p class="font-thin text-sm">Page: {{ post.data.pageNum }}</p>
         <p class="font-thin text-sm">Interest Level: {{ post.data.interest }}</p>
+        <p class="font-thin text-sm">Last Update: {{ post.data.date | postDate }}</p>
+        {{ post.content | safe }}
     </div>
-    {{ post.content | safe }}
+    <p></p>
 {% endfor %}

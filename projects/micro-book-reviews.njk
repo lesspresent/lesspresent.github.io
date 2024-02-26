@@ -14,7 +14,9 @@ created: 2024-02-25T10:37:00
             <h3>{{ post.data.title }}</h3>
             <p class="font-thin text-sm">Author: {{ post.data.bookAuthor }}</p>
             <p class="font-thin text-sm">Overall Rating: {{ post.data.interest }}</p>
+            <p class="font-thin text-sm">Last Update: {{ post.data.date | postDate }}</p>
             {{ post.content | safe }}
         </div>
+        <p></p>
     {% endfor %}
 {% endblock %}
