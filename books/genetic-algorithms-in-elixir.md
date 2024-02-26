@@ -9,5 +9,5 @@ created: 2024-02-25T16:25:00
 tags: inProgressProgrammingBook
 ---
 
-Just started the book, so I haven't had time to develop many thoughts about it.
-I wasn't familiar with the subject matter, at all, but having read through the intro and some of the first chapter has raised my interest.
+Just started the book, so I haven't had enough exposure to develop many thoughts about it.
+With that said, I'm unfamiliar with the subject matter but the introductory material has raised my interest.

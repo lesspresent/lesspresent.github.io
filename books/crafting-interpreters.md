@@ -9,5 +9,7 @@ created:  2024-02-25T16:15:00
 tags: inProgressProgrammingBook
 ---
 
-Enjoying the book overall.
-Other books have taken a front-seat, but I plan to come back to this one.
+Fantastic, guided tour of implementing a language.
+I've tried a few of the exercises before reading them and have been pleasently surprised that: 1) Some of my approaches match the author's, and 2) Some of them don't, and the author has thought of quite a few thing I haven't.
+A good mix of "challenging enough" and "brand new concepts".
+Other books have taken a front-seat, for now, but I plan to come back to this one.
