@@ -2,7 +2,7 @@
 title: "Diaspora"
 bookAuthor: "Greg Egan"
 author: Jonathon
-pageNum: Middle of Chapter 5
+pageNum: Chapter 7
 interest: Very High
 date: 2024-03-03T14:08:00
 created: 2024-02-25T16:00:00
