@@ -18,24 +18,21 @@ title: Index
         
         This site is written in the style of a text adventure.
         This note sits on a desk inside the Study here at Solitude.
-        Solitude is a spacestation orbiting an ancient red dwarf, located far beyond the visible universe as seen from Earth.
+        Solitude is a spacestation orbiting an ancient red dwarf, in a different type of reality you can learn about by exploring.
         Make yourself a drink in the lounge and, if you can get the portals working, have a trip around the star system.
       
         ~Jonathon</pre>
       <p>
-        Also on this desk are three heavy, ornate books: Journal, Projects, and Notes.
+        Also on this desk is a heavy, ornate book labeled "Journal".
       </p>
       <p>
         The desk itself is large, semi-circular, and positioned in the center of a 12 meter wide, by 5 meter tall cylindrical room bordered in bookshelves.
         Overhead, the transparent ceiling shows a field of stars denser, clearer, and more vibrant than can be seen anywhere on Earth.
-        There's a set of doule-doors directly ahead.
+        There's a set of double-doors directly ahead.
       </p>
       <p>
         <a href="./lp/solitude/study">Stand up and look around</a>.
       </p>
-    </div>
-
-    <div class="grid grid-cols-3">
       {% set maxPosts = 5 %}
       <div>
         <h2>Recent Journal Entries</h2>
@@ -51,36 +48,6 @@ title: Index
           {% endfor %}
         </ul>
         <a href="/tags/journal/">All Journal entries</a>
-      </div>
-      <div>
-        <h2>Recent Project Updates</h2>
-        <ul>
-          {% set taglist = collections.projects.slice(-maxPosts) %}
-          {% for post in taglist | reverse %}
-          <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
-            <p>Created: {{ post.data.created | postDate }}</p>
-            {% if post.data.created.toString() != post.page.date.toString() %}
-              <p>Updated: {{ post.page.date | postDate }}</p>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-        <a href="/tags/projects/">All projects</a>
-      </div>
-      <div>
-        <h2>Recent Notes</h2>
-        <ul>
-          {% set taglist = collections.notes.slice(-maxPosts) %}
-          {% for post in taglist | reverse %}
-          <li class="space-y-0"><a href="{{ post.url }}">{{ post.data.title }}</a>
-            <p>Created: {{ post.data.created | postDate }}</p>
-            {% if post.data.created.toString() != post.page.date.toString() %}
-              <p>Updated: {{ post.page.date | postDate }}</p>
-            {% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-        <a href="/tags/notes/">All Notes</a>
       </div>
     </div>
   </article>
