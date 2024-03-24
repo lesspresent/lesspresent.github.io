@@ -9,7 +9,7 @@
   
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-  <link rel="stylesheet" href="/style.css?v=1710721450985" />
+  <link rel="stylesheet" href="/style.css?v=1711317464652" />
   <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet">
   
 </head>
@@ -29,20 +29,22 @@
             <p class="font-thin text-sm">by Jonathon</p>
             <p class="font-thin text-sm">authored Sun, Feb 25, 2024, 12:50 PM</p>
             
+                <p class="font-thin text-sm">updated Sun, Mar 24, 2024, 4:22 PM</p>
+            
         </div>
-        <p>I've been playing with building worlds and interpreters for adventure games.
-These have taken the form of text-based adventure, but could could support simple graphics, and support puzzles similar to what you'd find in Myst-likes.
-While I've implemented a few text adventure interpreters, I haven't done anything novel (nor do I feel that I've built anything I'd be comfortable calling a game), but it seems interesting enough to share.
-I've learned quite a lot, particularly about how difficult the creative process can be, though I'm not sure it's a project I want to continue with.</p>
+        <p>Rough thoughts on adventure games.</p>
+<p>I've build a few interpreters for text adventures.
+I haven't done anything novel (or anything I'd be comfortable calling a game), but it seems interesting enough to keep as a side project.
+I've learned a lot; like how difficult the creative process can be, but most of all that there's a sweet spot to get expressive ease in a powerful platform.</p>
 <p>Over the past ~year, I've implemented three interpreters, all based on a similar model.
-The first interpreter was written in Elixir and ran on the command-line, the second was written in Typescript and included a domain-specific language, while the third was also written in Elixir but used Phoenix and LiveView.
-These went through a few major mutations, but each is based on a model of &quot;places&quot; that exist in a &quot;universe&quot;.</p>
-<p>The first interpreter.</p>
-<p>The second interpreter.</p>
-<p>The third interpreter.</p>
-<p>What did I learn?</p>
-<p>So what's missing?</p>
-<p>Am I going to continue?</p>
+The first interpreter was written in Elixir and ran on the command-line, the second was written in Typescript and included a domain-specific language, and the third was also written in Elixir but used Phoenix and LiveView.
+These went through a few major mutations, but each is based on a model.</p>
+<p>I think this is the key to getting a fully-featured engine: write a lot of fiction and a lot of puzzles.
+What I think each of my implementations lacks is a zero-friction way to implement worlds, and so I'm writing very few puzzles, instead getting wrapped-up in the technology and leaving huge gaps between commits.
+I think I've settled on a model thats just markdown and HTML, on top of which I can sprinkle the <em>tiniest layer</em> of javascript.
+And so, now I can focus on world-building -- letting things get messy and creative for a while -- and letting features come out of that.</p>
+<p>Hopefully this is the first in a series of posts about how this process and the world that emerges from it.</p>
+<p>~JS</p>
 
     </article>
 
